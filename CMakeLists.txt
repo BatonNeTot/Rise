@@ -4,6 +4,7 @@
 cmake_minimum_required (VERSION 3.8)
 
 project ("Rise")
+set(CMAKE_CXX_STANDARD 17)
 
 file(GLOB_RECURSE PROJECT_SOURCES
             CONFIGURE_DEPENDS
@@ -26,4 +27,3 @@ add_subdirectory(dependencies/glfw dependencies/glfw EXCLUDE_FROM_ALL)
 add_dependencies(Rise glfw)
 
 target_link_libraries(Rise PUBLIC vulkan-1 PUBLIC glfw3)
-
