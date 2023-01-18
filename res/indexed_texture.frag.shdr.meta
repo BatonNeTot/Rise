@@ -1,0 +1,13 @@
+{
+	"type":"fragment",
+	"constant":
+		[["offset","vec2"], ["size","vec2"], ["textColor","vec3"]],
+	"constantOffset": 16,
+	"uniforms":[
+		{
+			"set":0,
+			"binding":0,
+			"format":"sampler2d"
+		}
+		]
+}

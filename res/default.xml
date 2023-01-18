@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Bundle>
+	<Shader id="vert" type="vertex" source="shaders/vert.vert" 
+		constant="pos:vec2 color:vec3">
+		<!--
+		<Uniform 
+			id="ubo"
+			binding="0"
+			type="vec2 vec3"/>-->
+	</Shader>
+	<Shader id="frag" type="fragment" source="shaders/frag.frag"/>
+	<Shader id="draw_square.vert" type="vertex" source="shaders/draw_square.vert" 
+		constant="color:vec3"/>
+	<Shader id="colored.vert" type="vertex" source="shaders/colored.vert" 
+		constant="color:vec3"/>
+	<GraphicsPipeline 
+		id="default"
+		renderPass="color"
+		vertShader="vert"
+		fragShader="frag"
+		vertexFormat="vec2 vec3"/>
+	<GraphicsPipeline
+		id="drawSquare"
+		renderPass="color"
+		vertShader="draw_square.vert"
+		fragShader="frag"/>
+	<GraphicsPipeline 
+		id="default_wired_line_strip"
+		renderPass="color"
+		polygon="line_strip"
+		wired="false"
+		vertShader="colored.vert"
+		fragShader="frag"
+		vertexFormat="vec2"/>
+	<Window id="default">default.json:window</Window>
+</Bundle>

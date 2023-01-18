@@ -1,0 +1,36 @@
+#version 450
+
+layout(location = 0) in vec2 fragCoord;
+
+layout(set = 0, binding = 0) uniform sampler2D texSampler;
+
+layout(push_constant) uniform ConstantObject {
+     layout(offset = 16) float leftText;
+     layout(offset = 20) float rightText;
+     layout(offset = 24) float topText;
+     layout(offset = 28) float bottomText;
+
+     layout(offset = 32) float leftPos;
+     layout(offset = 36) float rightPos;
+     layout(offset = 40) float topPos;
+     layout(offset = 44) float bottomPos;
+} constant;
+
+layout(location = 0) out vec4 outColor;
+
+float calculateCoord(float value, float minText, float maxText, float minPos, float maxPos) {
+    if (value < minPos) {
+        return minText * value / minPos;
+    } else if (value > maxPos) {
+        return maxText + (1 - maxText) * (value - maxPos) / (1 - maxPos);
+    } else {
+        return minText + (maxText - minText) * (value - minPos) / (maxPos - minPos);
+    }
+}
+
+void main() {
+    outColor = texture(texSampler, vec2(
+        calculateCoord(fragCoord.x, constant.leftText, constant.rightText, constant.leftPos, constant.rightPos),
+        calculateCoord(fragCoord.y, constant.topText, constant.bottomText, constant.topPos, constant.bottomPos)
+        ));
+}

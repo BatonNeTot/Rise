@@ -1,0 +1,4 @@
+/build
+/lib
+*.sublime-project
+*.sublime-workspace

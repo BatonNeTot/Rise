@@ -1,0 +1,12 @@
+{
+	"type":"vertex", 
+	"constant":
+		[["color","vec3"]],
+	"uniforms":[
+		{
+			"set":0,
+			"binding":0,
+			"format": [["pos","vec2"]]
+		}
+		]
+}

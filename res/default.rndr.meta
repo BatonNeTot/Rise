@@ -1,0 +1,6 @@
+{
+	"renderPass":"color",
+	"vertShader":"vert",
+	"fragShader":"frag",
+	"format": ["vec2", "vec3"]
+}

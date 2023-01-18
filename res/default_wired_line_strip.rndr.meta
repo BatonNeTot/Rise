@@ -1,0 +1,8 @@
+{
+	"renderPass":"color",
+	"polygon":"line_strip",
+	"wired":"false",
+	"vertShader":"colored.vert",
+	"fragShader":"frag",
+	"format": ["vec2"]
+}

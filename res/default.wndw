@@ -1,0 +1,14 @@
+{
+	"children":[
+		{
+			"components":[
+				{
+					"id":"MinesweeperNComponent",
+					"width":20,
+					"height":10,
+					"mines":15
+				}
+			]
+		}
+	]
+}
