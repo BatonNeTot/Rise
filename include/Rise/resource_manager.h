@@ -205,6 +205,9 @@ namespace Rise {
 
         void IndexResourcesIndirectory(const std::filesystem::path& dir);
         void IndexResource(const std::string& filename);
+
+        friend class Core;
+        void RegisterBuiltinResources();
         
         ResourceManager& _manager;
         Loader& _loader;

@@ -1,5 +1,0 @@
-{
-	"renderPass":"color",
-	"vertShader":"draw_square.vert",
-	"fragShader":"frag"
-}

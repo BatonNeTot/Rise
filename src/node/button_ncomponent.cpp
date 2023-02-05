@@ -1,5 +1,5 @@
 //☀Rise☀
-#include "button_ncomponent.h"
+#include "Rise/node/button_ncomponent.h"
 
 namespace Rise {
 

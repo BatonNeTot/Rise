@@ -1,9 +1,9 @@
 //☀Rise☀
-#include "uniform.h"
+#include "Rise/uniform.h"
 
-#include "window.h"
-#include "gpu_allocator.h"
-#include "rise.h"
+#include "Rise/window.h"
+#include "Rise/gpu_allocator.h"
+#include "Rise/rise.h"
 
 namespace Rise {
 

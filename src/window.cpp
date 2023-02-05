@@ -1,10 +1,10 @@
 //☀Rise☀
-#include "window.h"
+#include "Rise/window.h"
 
-#include "rise.h"
+#include "Rise/rise.h"
 
-#include "gpu_allocator.h"
-#include "resource.h"
+#include "Rise/gpu_allocator.h"
+#include "Rise/resource.h"
 
 #include <cstdint>
 #include <limits>

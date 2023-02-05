@@ -1,5 +1,5 @@
 //☀Rise☀
-#include "default_node.h"
+#include "Rise/node/default_node.h"
 
 namespace Rise {
 

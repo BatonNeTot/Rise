@@ -1,7 +1,7 @@
 //☀Rise☀
-#include "image.h"
+#include "Rise/image.h"
 
-#include "gpu_allocator.h"
+#include "Rise/gpu_allocator.h"
 
 #include "stb_image.h"
 

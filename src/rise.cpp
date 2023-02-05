@@ -1,11 +1,11 @@
 //☀Rise☀
-#include "rise.h"
+#include "Rise/rise.h"
 
-#include "logger.h"
-#include "loader.h"
-#include "resource_manager.h"
-#include "gpu_allocator.h"
-#include "window.h"
+#include "Rise/logger.h"
+#include "Rise/loader.h"
+#include "Rise/resource_manager.h"
+#include "Rise/gpu_allocator.h"
+#include "Rise/window.h"
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
@@ -85,6 +85,8 @@ Core::Core() {
     _loader = new Rise::Loader(8);
     _resources = new Rise::ResourceManager();
     _resourceGenerator = new Rise::ResourceGenerator(*_resources, *_loader);
+
+    _resourceGenerator->RegisterBuiltinResources();
 
     if (FT_Init_FreeType(&_freeTypeLibrary))
     {

@@ -1,7 +1,7 @@
 //☀Rise☀
-#include "9slice_ncomponent.h"
+#include "Rise/node/9slice_ncomponent.h"
 
-#include "resource_manager.h"
+#include "Rise/resource_manager.h"
 
 namespace Rise {
 

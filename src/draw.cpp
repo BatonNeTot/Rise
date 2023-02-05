@@ -1,9 +1,9 @@
 //☀Rise☀
-#include "draw.h"
+#include "Rise/draw.h"
 
-#include "render_target.h"
-#include "vertices.h"
-#include "framebuffer.h"
+#include "Rise/render_target.h"
+#include "Rise/vertices.h"
+#include "Rise/framebuffer.h"
 
 namespace Rise {
 

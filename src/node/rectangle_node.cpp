@@ -1,5 +1,5 @@
 //☀Rise☀
-#include "rectangle_node.h"
+#include "Rise/node/rectangle_node.h"
 
 namespace Rise {
 

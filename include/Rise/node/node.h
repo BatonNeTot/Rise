@@ -2,11 +2,11 @@
 #ifndef node_h
 #define node_h
 
-#include "rise_object.h"
-#include "draw.h"
-#include "types.h"
-#include "resource_manager.h"
-#include "utils/data.h"
+#include "Rise/rise_object.h"
+#include "Rise/draw.h"
+#include "Rise/types.h"
+#include "Rise/resource_manager.h"
+#include "Rise/utils/data.h"
 
 #include <vector>
 

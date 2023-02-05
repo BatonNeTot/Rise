@@ -2,9 +2,9 @@
 #ifndef label_ncomponent_h
 #define label_ncomponent_h
 
-#include "node.h"
+#include "Rise/node/node.h"
 
-#include "font.h"
+#include "Rise/font.h"
 
 namespace Rise {
 

@@ -2,9 +2,9 @@
 #ifndef texture_ncomponent_h
 #define texture_ncomponent_h
 
-#include "node.h"
+#include "Rise/node/node.h"
 
-#include "image.h"
+#include "Rise/image.h"
 
 namespace Rise {
 

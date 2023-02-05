@@ -2,10 +2,10 @@
 #ifndef default_ncomponent_h
 #define default_ncomponent_h
 
-#include "node.h"
+#include "Rise/node/node.h"
 
-#include "resource_manager.h"
-#include "vertices.h"
+#include "Rise/resource_manager.h"
+#include "Rise/vertices.h"
 
 namespace Rise {
 

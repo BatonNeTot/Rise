@@ -1,7 +1,7 @@
 //☀Rise☀
-#include "rise_object.h"
+#include "Rise/rise_object.h"
 
-#include "rise.h"
+#include "Rise/rise.h"
 
 namespace Rise {
 

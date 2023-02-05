@@ -1,7 +1,7 @@
 //☀Rise☀
-#include "font.h"
+#include "Rise/font.h"
 
-#include "rise.h"
+#include "Rise/rise.h"
 
 #include FT_GLYPH_H
 

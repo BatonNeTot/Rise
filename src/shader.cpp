@@ -1,9 +1,9 @@
 //☀Rise☀
-#include "shader.h"
+#include "Rise/shader.h"
 
-#include "logger.h"
-#include "loader.h"
-#include "rise.h"
+#include "Rise/logger.h"
+#include "Rise/loader.h"
+#include "Rise/rise.h"
 
 #define GLM_FORCE_RADIANS
 #define GLM_FORCE_DEFAULT_ALIGNED_GENTYPES

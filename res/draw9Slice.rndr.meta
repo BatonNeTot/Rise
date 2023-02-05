@@ -1,6 +1,0 @@
-{
-	"renderPass":"color",
-	"vertShader":"draw_texture.vert",
-	"fragShader":"9slice.frag",
-	"useAlpha":true
-}

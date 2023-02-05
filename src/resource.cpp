@@ -1,10 +1,10 @@
 ﻿//☀Rise☀
 
-#include "resource.h"
+#include "Rise/resource.h"
 
-#include "shader.h"
-#include "loader.h"
-#include "rise.h"
+#include "Rise/shader.h"
+#include "Rise/loader.h"
+#include "Rise/rise.h"
 
 namespace Rise {
 

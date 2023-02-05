@@ -1,5 +1,5 @@
 //☀Rise☀
-#include "types.h"
+#include "Rise/types.h"
 
 namespace Rise {
 

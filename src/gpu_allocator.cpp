@@ -1,8 +1,8 @@
 //☀Rise☀
-#include "gpu_allocator.h"
+#include "Rise/gpu_allocator.h"
 
-#include "rise.h"
-#include "logger.h"
+#include "Rise/rise.h"
+#include "Rise/logger.h"
 
 namespace Rise {
 

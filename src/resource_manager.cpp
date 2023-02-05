@@ -1,10 +1,24 @@
 ﻿//☀Rise☀
 
-#include "resource_manager.h"
+#include "Rise/resource_manager.h"
 
-#include "resource.h"
-#include "rise.h"
-#include "shader.h"
+#include "Rise/resource.h"
+#include "Rise/rise.h"
+#include "Rise/shader.h"
+
+#include "Rise/node/node.h"
+
+#include "Rise/node/default_node.h"
+#include "Rise/node/fake_index_node.h"
+#include "Rise/node/grid_node.h"
+#include "Rise/node/margin_node.h"
+#include "Rise/node/rectangle_node.h"
+
+#include "Rise/node/default_ncomponent.h"
+#include "Rise/node/9slice_ncomponent.h"
+#include "Rise/node/button_ncomponent.h"
+#include "Rise/node/label_ncomponent.h"
+#include "Rise/node/texture_ncomponent.h"
 
 #include <filesystem>
 #include <iostream>
@@ -52,6 +66,21 @@ namespace Rise {
         }
         auto idWithExt = filename.substr(0, filename.length() - metaExtension.length());
         _fullpathByExt.try_emplace(std::string(idWithExt), fullFilename.substr(0, fullFilename.length() - metaExtension.length()));
+    }
+
+    void ResourceGenerator::RegisterBuiltinResources() {
+        ResourceFabric<Node>::AddFabricKey<Node>("Node");
+        ResourceFabric<Node>::AddFabricKey<DefaultNode>("DefaultNode");
+        ResourceFabric<Node>::AddFabricKey<FakeIndexNode>("FakeIndexNode");
+        ResourceFabric<Node>::AddFabricKey<GridNode>("GridNode");
+        ResourceFabric<Node>::AddFabricKey<MarginNode>("MarginNode");
+        ResourceFabric<Node>::AddFabricKey<RectangleNode>("RectangleNode");
+
+        ResourceFabric<NComponent>::AddFabricKey<DefaultNComponent>("DefaultNComponent");
+        ResourceFabric<NComponent>::AddFabricKey<N9SliceNComponent>("N9SliceNComponent");
+        ResourceFabric<NComponent>::AddFabricKey<ButtonNComponent>("ButtonNComponent");
+        ResourceFabric<NComponent>::AddFabricKey<LabelNComponent>("LabelNComponent");
+        ResourceFabric<NComponent>::AddFabricKey<TextureNComponent>("TextureNComponent");
     }
 
 };

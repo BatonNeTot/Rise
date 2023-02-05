@@ -1,7 +1,7 @@
 //☀Rise☀
-#include "texture_ncomponent.h"
+#include "Rise/node/texture_ncomponent.h"
 
-#include "resource_manager.h"
+#include "Rise/resource_manager.h"
 
 namespace Rise {
 

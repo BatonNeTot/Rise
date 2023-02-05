@@ -1,9 +1,9 @@
 //☀Rise☀
-#include "default_ncomponent.h"
+#include "Rise/node/default_ncomponent.h"
 
-#include "draw.h"
-#include "image.h"
-#include "font.h"
+#include "Rise/draw.h"
+#include "Rise/image.h"
+#include "Rise/font.h"
 
 #include <chrono>
 #define _USE_MATH_DEFINES

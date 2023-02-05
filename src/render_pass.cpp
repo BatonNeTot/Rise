@@ -1,9 +1,9 @@
 //☀Rise☀
-#include "render_pass.h"
+#include "Rise/render_pass.h"
 
-#include "uniform.h"
-#include "window.h"
-#include "rise.h"
+#include "Rise/uniform.h"
+#include "Rise/window.h"
+#include "Rise/rise.h"
 
 namespace Rise {
 

@@ -1,7 +1,7 @@
 //☀Rise☀
-#include "node.h"
+#include "Rise/node/node.h"
 
-#include "rise.h"
+#include "Rise/rise.h"
 
 namespace Rise {
 

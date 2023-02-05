@@ -3,36 +3,32 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-project ("Rise")
+set(PROJECT_NAME "Rise")
 
-# Include sub-projects.
+project (${PROJECT_NAME})
+
 add_subdirectory ("src")
 
-# install(SCRIPT "CMakeInstall.txt")
+file(GLOB_RECURSE PROJECT_HEADERS CONFIGURE_DEPENDS "include/*")
 
-file(GLOB_RECURSE RES_FILES CONFIGURE_DEPENDS "res/*")
+add_library (${PROJECT_NAME} STATIC ${PROJECT_SOURCES} ${PROJECT_HEADERS})
+set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 20)
+set_source_files_properties(${PROJECT_HEADERS} PROPERTIES HEADER_FILE_ONLY true)
 
-message("${RES_FILES}")
-message("${CMAKE_CURRENT_BINARY_DIR}")
-
-add_executable (Rise WIN32 ${RISE_SOURCES} ${RES_FILES})
-set_property(TARGET Rise PROPERTY CXX_STANDARD 20)
-set_source_files_properties(${RES_FILES} PROPERTIES HEADER_FILE_ONLY true)
+set_target_properties(${PROJECT_NAME}
+    PROPERTIES
+    ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/lib/$<CONFIG>"
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/lib/$<CONFIG>"
+)
 
 get_filename_component(RISE_WORKING_DIR ${CMAKE_CURRENT_SOURCE_DIR} ABSOLUTE)
-target_compile_definitions(Rise PUBLIC RISE_RESOURCE_DIRECTORY="${RISE_WORKING_DIR}/res/")
-target_compile_definitions(Rise PRIVATE _AMD64_)
+target_compile_definitions(${PROJECT_NAME} PRIVATE _AMD64_)
 
-#if(MSVC)
-#    string(REGEX REPLACE "/W[1-3]" "/W4" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
-#else()
-#    add_compile_options(-Wall -Wextra -pedantic -Werror)
-#endif()
-
-set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT Rise)
+#Include setting RISE_RESOURCE_DIRECTORY in your CMake file
+target_compile_definitions(${PROJECT_NAME} PUBLIC RISE_RESOURCE_DIRECTORY="${RISE_RESOURCE_DIRECTORY}")
 
 add_subdirectory ("libs")
-target_link_libraries(Rise debug shadercd shaderc_combinedd vulkan-1 glfw3 pugixml freetype)
-target_link_libraries(Rise optimized shaderc shaderc_combined vulkan-1 glfw3 pugixml freetype)
-target_include_directories(Rise INTERFACE "include")
-target_include_directories(Rise PRIVATE "src")
+target_link_libraries(${PROJECT_NAME} debug shadercd shaderc_combinedd vulkan-1 glfw3 pugixml freetype)
+target_link_libraries(${PROJECT_NAME} optimized shaderc shaderc_combined vulkan-1 glfw3 pugixml freetype)
+target_include_directories(${PROJECT_NAME} PUBLIC "include")
+target_include_directories(${PROJECT_NAME} PRIVATE "src")
